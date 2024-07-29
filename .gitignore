@@ -1,0 +1,24 @@
+# Python specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+venv.bak/
+*.env
+
+# Node.js specific files
+node_modules/
+npm-debug.log
+yarn-error.log
+*.env
+
+# General files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

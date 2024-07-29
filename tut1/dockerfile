@@ -1,0 +1,11 @@
+# Use the official Node.js image as a base image
+FROM node:14
+
+# # Create and change to the app directory
+# WORKDIR /usr/src/app
+
+# Copy app.js to the container
+COPY app.js .
+
+# Run the app
+CMD ["node", "app.js"]
