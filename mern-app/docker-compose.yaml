@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    build: ./frontend
+    ports:
+      - "3003:3003"
+  
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      MONGODB_PATH: mongodb://db/task_db
+    
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - "27017:27017"
+    volumes:
+      - task-db:/data/db
+
+volumes:
+  task-db:
